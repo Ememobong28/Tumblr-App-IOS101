@@ -15,6 +15,7 @@
 		ED59161C29BC307E000F25AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED59161A29BC307E000F25AE /* LaunchScreen.storyboard */; };
 		ED59162429BC4921000F25AE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED59162329BC4921000F25AE /* Post.swift */; };
 		ED59162929BC50E7000F25AE /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = ED59162829BC50E7000F25AE /* Nuke */; };
+		EE6BA4AF2BB2676D00595BA1 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6BA4AE2BB2676D00595BA1 /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		ED59161B29BC307E000F25AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED59161D29BC307E000F25AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED59162329BC4921000F25AE /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		EE6BA4AE2BB2676D00595BA1 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				ED59161829BC307E000F25AE /* Assets.xcassets */,
 				ED59161A29BC307E000F25AE /* LaunchScreen.storyboard */,
 				ED59161D29BC307E000F25AE /* Info.plist */,
+				EE6BA4AE2BB2676D00595BA1 /* PostCell.swift */,
 			);
 			path = "ios101-project5-tumblr";
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				ED59161029BC307D000F25AE /* AppDelegate.swift in Sources */,
 				ED59161229BC307D000F25AE /* SceneDelegate.swift in Sources */,
 				ED59162429BC4921000F25AE /* Post.swift in Sources */,
+				EE6BA4AF2BB2676D00595BA1 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,10 +303,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NUMH9XKJ9A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ios101-project5-tumblr/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Tumblr-App";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -311,7 +317,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.codepath.ios101-project5-tumblr";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Immanuella.Tumblr-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -326,10 +332,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NUMH9XKJ9A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ios101-project5-tumblr/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Tumblr-App";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -338,7 +346,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.codepath.ios101-project5-tumblr";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Immanuella.Tumblr-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
