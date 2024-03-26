@@ -38,6 +38,8 @@ class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     private var posts: [Post] = []
+    private var offset: Int = 0
+    private let limit: Int = 20
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +61,7 @@ class ViewController: UIViewController, UITableViewDataSource {
 
     @objc private func refreshData(_ sender: Any) {
         print("🔄 Starting to refresh data...")
+        offset += limit
         
         refreshControl.beginRefreshing()
         fetchPosts()
@@ -66,7 +69,8 @@ class ViewController: UIViewController, UITableViewDataSource {
 
 
     func fetchPosts() {
-        let url = URL(string: "https://api.tumblr.com/v2/blog/nationalgeographicmagazine.tumblr.com/posts/photo?api_key=1zT8CiXGXFcQDyMFG7RtcfGLwTdDjFUJnZzKJaWTmgyK4lKGYk")!
+        let url = URL(string: "https://api.tumblr.com/v2/blog/nationalgeographicmagazine.tumblr.com/posts/photo?api_key=1zT8CiXGXFcQDyMFG7RtcfGLwTdDjFUJnZzKJaWTmgyK4lKGYk&limit=\(limit)&offset=\(offset)")!
+
         let session = URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
                 print("❌ Error: \(error.localizedDescription)")
@@ -89,6 +93,7 @@ class ViewController: UIViewController, UITableViewDataSource {
                 DispatchQueue.main.async { [weak self] in
 
                     let posts = blog.response.posts
+                    let newPosts = blog.response.posts
 
 
                     print("✅ We got \(posts.count) posts!")
@@ -97,6 +102,8 @@ class ViewController: UIViewController, UITableViewDataSource {
                     }
                     
                     self?.posts = posts
+                    self?.posts.append(contentsOf: newPosts)
+                    self?.posts.shuffle()
                     self?.tableView.reloadData()
                     self?.refreshControl.endRefreshing()
                     print("🍏 Fetched and stored \(posts.count) movies")
